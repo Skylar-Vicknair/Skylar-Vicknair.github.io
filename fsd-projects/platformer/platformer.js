@@ -30,7 +30,7 @@ $(function () {
      toggleGrid();
 
 
-    // TODO 2 - Create Platforms
+    // TODO 2 - Create Platforms /* MAKE THEM COLORED IN CSS */
      createPlatform(350, 610, 350, 130)
      createPlatform(700, 510, 200, 230)
      createPlatform(900, 420, 105, 15)
@@ -38,17 +38,19 @@ $(function () {
      createPlatform(1125, 680, 60, 15)
      createPlatform(450, 420, 105, 15)
      createPlatform(1105, 380, 30, 15)
-     create
-
-
-    // TODO 3 - Create Collectables
-
-
-
-    
+     createPlatform(1275, 250, 15, 7)
+     createPlatform(1390, 120, 15, 7)
+    // TODO 3 - Create Collectables /* Make them labubus */
+     createCollectable("labubu", 525, 565, 1, .5)
+     createCollectable("labubu", 800, 465, 1, .5)
+     createCollectable("labubu", 480, 365, 1, .5)
+     createCollectable("labubu", 1300, 675, 1, .5)
+     createCollectable("labubu", 1360, 85, 1, .5)
     // TODO 4 - Create Cannons
-
-
+     createCannon("right", 200, 750)
+     createCannon("right", 325, 1500)
+     createCannon("right", 775, 2000)
+     createCannon("top", 610, 2000)
     
     
     //////////////////////////////////

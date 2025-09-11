@@ -98,4 +98,5 @@ var collectableList = {
   kennedi: { image: "images/collectables/kennedi-head.png" },
   max: { image: "images/collectables/max-head.png" },
   steve: { image: "images/collectables/steve-head.png" },
+  labubu: { image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiLycedRiwFiKFGYSqDpa7WS5VhZLkml6qfrAmjVY10RCdeJU:https://pngdownload.io/wp-content/uploads/2025/06/Pop-Mart-Monster-Elf.webp&s"}
 };
