@@ -27,7 +27,7 @@ $(function () {
     //////////////////////////////////
 
     // TODO 1 - Enable the Grid
-     toggleGrid();
+     ;
 
 
     // TODO 2 - Create Platforms /* MAKE THEM COLORED IN CSS */
