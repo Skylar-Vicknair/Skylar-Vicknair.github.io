@@ -31,15 +31,15 @@ $(function () {
 
 
     // TODO 2 - Create Platforms /* MAKE THEM COLORED IN CSS */
-     createPlatform(350, 610, 350, 130)
-     createPlatform(700, 510, 200, 230)
-     createPlatform(900, 420, 105, 15)
-     createPlatform(1050, 550, 60, 15)
-     createPlatform(1125, 680, 60, 15)
-     createPlatform(450, 420, 105, 15)
-     createPlatform(1105, 380, 30, 15)
-     createPlatform(1275, 250, 15, 7)
-     createPlatform(1390, 120, 15, 7)
+     createPlatform(350, 610, 350, 130, "red")
+     createPlatform(700, 510, 200, 230, "red")
+     createPlatform(900, 420, 105, 15, "red")
+     createPlatform(1050, 550, 60, 15, "red")
+     createPlatform(1125, 680, 60, 15, "red")
+     createPlatform(450, 420, 105, 15, "red")
+     createPlatform(1105, 380, 30, 15, "red")
+     createPlatform(1275, 250, 15, 7, "red")
+     createPlatform(1390, 120, 15, 7, "red")
     // TODO 3 - Create Collectables /* Make them labubus */
      createCollectable("labubu", 525, 565, 1, .5)
      createCollectable("labubu", 800, 465, 1, .5)
