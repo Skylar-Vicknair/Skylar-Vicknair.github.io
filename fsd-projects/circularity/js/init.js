@@ -20,21 +20,32 @@ var init = function (window) {
         ///////////////////
         
         // TODO 1 : Declare and initialize our variables
-
-
+        
+        var circle;
+        var circles = [];
 
         // TODO 2 : Create a function that draws a circle 
         
-
+        function drawCircle() {
+            circle = draw.randomCircleInArea(canvas, true, true, "#d61010ff", 2);
+            physikz.addRandomVelocity(circle, canvas, 5, 5);
+            view.addChild(circle);
+            circles.push(circle);
+        }
 
         // TODO 3 : Call the drawCircle() function
-
-
-
+        /*
+        drawCircle();
+        drawCircle();
+        drawCircle();
+        drawCircle();
+        drawCircle();
+        */
         // TODO 7 : Use a loop to create multiple circles
 
-
-
+        for (drawCircle() = 0; drawCircle() < 5; drawCircle()++) {
+            drawCircle();
+        }
 
         ///////////////////
         // PROGRAM LOGIC //
@@ -48,14 +59,25 @@ var init = function (window) {
         function update() {
             // TODO 4 : Update the position of each circle using physikz.updatePosition()
 
+            physikz.updatePosition(circle[0]);
+            physikz.updatePosition(circle[1]);
+            physikz.updatePosition(circle[2]);
+            physikz.updatePosition(circle[3]);
+            physikz.updatePosition(circle[4]);
             
             // TODO 5 : Call game.checkCirclePosition() on your circles
            
+            game.checkCirclePosition(circle[0]);
+            game.checkCirclePosition(circle[1]);
+            game.checkCirclePosition(circle[2]);
+            game.checkCirclePosition(circle[3]);
+            game.checkCirclePosition(circle[4]);
 
             // TODO 8 / TODO 9 : Iterate over the array
            
-            
+            for (circles[])
         }
+        update();
     
         /* 
         This Function should check the position of a circle that is passed to the 
@@ -71,7 +93,15 @@ var init = function (window) {
             
             // TODO 6 : YOUR CODE STARTS HERE //////////////////////
             
-
+            else if (circle.x < 0) {
+                circle.x = canvas.width;
+            }
+            else if (circle.y > canvas.height) {
+                circle.y = 0;
+            }
+            else if (circle.y < 0) {
+                circle.y = canvas.height;
+            }
 
             // YOUR TODO 6 CODE ENDS HERE //////////////////////////
         }
@@ -91,6 +121,7 @@ var init = function (window) {
         app.addUpdateable(window.opspark.game);
     }
 };
+window.opspark.makeGame();
 
 // DO NOT REMOVE THIS CODE //////////////////////////////////////////////////////
 if((typeof process !== 'undefined') &&
