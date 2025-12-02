@@ -7,13 +7,14 @@ var init = function (window) {
         app = window.opspark.makeApp(),
         canvas = app.canvas, 
         view = app.view,
-        fps = draw.fps('#000');
+        fps = draw.fps('#ffffffff');
         
     
     window.opspark.makeGame = function() {
         
         window.opspark.game = {};
         var game = window.opspark.game;
+        canvas.style.backgroundColor = '#1a1a1a';
         
         ///////////////////
         // PROGRAM SETUP //
@@ -64,7 +65,7 @@ var init = function (window) {
             physikz.updatePosition(circle[2]);
             physikz.updatePosition(circle[3]);
             physikz.updatePosition(circle[4]);
-          */  
+           */
             // TODO 5 : Call game.checkCirclePosition() on your circles
            /*
             game.checkCirclePosition(circle[0]);
@@ -72,12 +73,12 @@ var init = function (window) {
             game.checkCirclePosition(circle[2]);
             game.checkCirclePosition(circle[3]);
             game.checkCirclePosition(circle[4]);
-            */
+           */ 
             // TODO 8 / TODO 9 : Iterate over the array
            
-            for (var i = 0; i < 5; i++) {
-              physikz.updatePosition[i];
-              game.checkCirclePosition[i];
+            for (var i = 0; i < circles.length; i++) {
+              physikz.updatePosition(circles[i]);
+              game.checkCirclePosition(circles[i]);
             }
         }
         
@@ -108,7 +109,7 @@ var init = function (window) {
 
             // YOUR TODO 6 CODE ENDS HERE //////////////////////////
         }
-        
+
         /////////////////////////////////////////////////////////////
         // --- NO CODE BELOW HERE  --- DO NOT REMOVE THIS CODE --- //
         /////////////////////////////////////////////////////////////
@@ -123,8 +124,9 @@ var init = function (window) {
         
         app.addUpdateable(window.opspark.game);
     }
+    window.opspark.makeGame();
 };
-window.opspark.makeGame();
+
 
 // DO NOT REMOVE THIS CODE //////////////////////////////////////////////////////
 if((typeof process !== 'undefined') &&
